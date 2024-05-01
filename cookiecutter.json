@@ -1,0 +1,32 @@
+{
+    "project_name": "My Project",
+    "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+    "description": "My Project Description!",
+    "author_name": "MohammadD3veloper",
+    "domain_name": "example.com",
+    "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
+    "version": "0.1.0",
+    "open_source_license": [
+      "MIT",
+      "BSD",
+      "GPLv3",
+      "Apache Software License 2.0",
+      "Not open source"
+    ],
+    "use_persian_django": "n",
+    "use_docker": "n",
+    "postgresql_version": [
+      "14",
+      "13",
+      "12",
+      "11",
+      "10"
+    ],
+    "postgres_user": "user",
+    "postgres_password": "password",
+    "use_async": "n",
+    "use_celery": "n",
+    "use_logging_system": "n",
+    "use_prometheus": "n",
+    "use_debug_toolbar": "n"
+}
