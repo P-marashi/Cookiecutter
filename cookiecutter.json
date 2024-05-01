@@ -17,6 +17,7 @@
       "10"
     ],
     "postgres_user": "user",
+    "use_jwt": "n",
     "postgres_password": "password",
     "use_async": "n",
     "use_celery": "n",
