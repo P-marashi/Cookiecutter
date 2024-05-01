@@ -4,29 +4,15 @@ features:
     resources:
       - "Dockerfile"
       - "docker-compose.yml"
-  - name: api_framework
-    technology: {{cookiecutter.api_framework|lower}}
-    resources:
-      - "config/settings/cors.py"
-      - "config/settings/spectacular.py"
-      - "{{ cookiecutter.project_slug }}/authentication/apis"
-      - "{{ cookiecutter.project_slug }}/core/jwt.py"
-    othersources:
-      - "static/"
-      - "templates/"
   - name: use_celery
     enabled: {{cookiecutter.use_celery|lower}}
     resources:
-      - "config/settings/celery.py"
+      - "config/libraries/celery.py"
       - "config/celery_app.py"
   - name: use_prometheus
     enabled: {{cookiecutter.use_prometheus|lower}}
     resources:
-      - "config/settings/prometheus.py"
-  - name: use_automation_script
-    enabled: {{ cookiecutter.use_automation_script }} 
-    resources:
-      - "scripts/bash_requirements.sh"
+      - "config/libraries/prometheus.py"
   - name: use_logging_system
     enabled: {{ cookiecutter.use_logging_system }}
     resources: 
