@@ -32,19 +32,10 @@ THIRD_PARTY_APPS = [
     "django_celery_results",
     "django_celery_beat",
     {%- endif %}
-    {%- if cookiecutter.api_framework == "RestFramework" %}
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_spectacular",
     "corsheaders",
-    {%- elif cookiecutter.api_framework == "GrapheneDjango" %}
-    "graphene_django",
-    {%- elif cookiecutter.api_framework == "DjangoGrpcFramework" %}
-    "django_grpc_framework",
-    {%- elif cookiecutter.api_framework == "BasicHTML" %}
-    "django-crispy-forms",
-    "crispy-bootstrap5",
-    {%- endif %}
     {%- if cookiecutter.use_debug_toolbar %}
     "debug_toolbar",
     {%- endif %}
@@ -163,6 +154,7 @@ USE_I18N = True
 
 USE_TZ = True
 {%- else %}
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
